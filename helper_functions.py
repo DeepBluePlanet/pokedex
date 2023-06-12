@@ -60,3 +60,20 @@ def classifier(arr, df):
       classified.append("Custom")
 
   return classified
+
+
+def show_5(df,l, preprocessed=False):
+  length = len(df)
+  if (l-1)*5 >= length:
+    return "Out of Bounce"
+  
+  if (l-1)*5 + 4 >= length:
+    if preprocessed == False:
+      return df[(l-1)*5:length]
+    else:
+      return [df_preprocessed[i-1] for i in df.index[(l-1)*5:length].to_list()]
+  else:
+    if preprocessed == False:
+      return df[(l-1)*5:(l-1)*5+5]
+    else:
+      return [df_preprocessed[i-1] for i in df.index[(l-1)*5:(l-1)*5+5].to_list()]
