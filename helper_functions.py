@@ -9,7 +9,7 @@ def data_clean(df):
     df_tmp.drop(axis=1, columns=["Fares - Email id", "Complaint_Email Id"],
                 inplace=True)
     df_tmp.fillna("", inplace=True)
-    return df_tmp
+    return df_tmp.copy()
 
 
 def preprocess(df):
