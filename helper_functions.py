@@ -38,7 +38,7 @@ def preprocess(df):
     return final
 
 
-def classifier(arr):
+def classifier(arr, df):
   classified = []
   for i, item in enumerate(arr):
     item = "".join(item)
