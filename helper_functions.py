@@ -62,7 +62,7 @@ def classifier(arr, df):
   return classified
 
 
-def show_5(df,l, preprocessed=False, df_preprocess):
+def show_5(df,l,df_preprocess,preprocessed=False):
   length = len(df)
   if (l-1)*5 >= length:
     return "Out of Bounce"
