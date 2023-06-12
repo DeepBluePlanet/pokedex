@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def data_clean(df):
-    retrun df[["Main Option", "Enquiry", "Fares", "Resolved", "Others", "Res_Amenities_s",
+    return df[["Main Option", "Enquiry", "Fares", "Resolved", "Others", "Res_Amenities_s",
                "Res_lost_found", "SUG & COMPLNT", "Suggestion", "Complaint", "Res_sug_complai",
                "Suggestion on fares", "Complaint on Fare", "Fare_suggestion/Complaint",
                "Survey", "Res_Station/train"]].copy(),fillna("")
