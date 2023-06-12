@@ -62,7 +62,7 @@ def classifier(arr, df):
   return classified
 
 
-def show_5(df,l, preprocessed=False):
+def show_5(df,l, preprocessed=False, df_preprocess):
   length = len(df)
   if (l-1)*5 >= length:
     return "Out of Bounce"
@@ -71,9 +71,9 @@ def show_5(df,l, preprocessed=False):
     if preprocessed == False:
       return df[(l-1)*5:length]
     else:
-      return [df_preprocessed[i-1] for i in df.index[(l-1)*5:length].to_list()]
+      return [df_preprocess[i-1] for i in df.index[(l-1)*5:length].to_list()]
   else:
     if preprocessed == False:
       return df[(l-1)*5:(l-1)*5+5]
     else:
-      return [df_preprocessed[i-1] for i in df.index[(l-1)*5:(l-1)*5+5].to_list()]
+      return [df_preprocess[i-1] for i in df.index[(l-1)*5:(l-1)*5+5].to_list()]
