@@ -13,9 +13,9 @@ def data_clean(df):
 
 
 def preprocess(df):
-    a = list(map(lambda x: "complaint_on_fare" if len(x) != 0 else "", df_tmp['Complaint on Fare']))
+    a = list(map(lambda x: "complaint_on_fare" if len(x) != 0 else "", df['Complaint on Fare']))
     df['Complaint on Fare'] = pd.Series([""] + a)
-    a = list(map(lambda x: "suggestion_on_fare" if len(x) != 0 else "", df_tmp['Suggestion on fares']))
+    a = list(map(lambda x: "suggestion_on_fare" if len(x) != 0 else "", df['Suggestion on fares']))
     df['Suggestion on fares'] = pd.Series([""] + a)
 
     final = []
