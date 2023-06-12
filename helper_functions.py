@@ -2,14 +2,10 @@ import pandas as pd
 
 
 def data_clean(df):
-    df_tmp = df[["Main Option", "Enquiry", "Fares", "Resolved", "Others", "Res_Amenities_s",
-                 "Res_lost_found", "SUG & COMPLNT", "Suggestion", "Complaint", "Res_sug_complai",
-                 "Fares - Email id", "Suggestion on fares", "Complaint on Fare", "Fare_suggestion/Complaint",
-                 "Survey", "Res_Station/train", "Complaint_Email Id"]].copy()
-    df_tmp.drop(axis=1, columns=["Fares - Email id", "Complaint_Email Id"],
-                inplace=True)
-    df_tmp.fillna("", inplace=True)
-    return df_tmp.copy()
+    retrun df[["Main Option", "Enquiry", "Fares", "Resolved", "Others", "Res_Amenities_s",
+               "Res_lost_found", "SUG & COMPLNT", "Suggestion", "Complaint", "Res_sug_complai",
+               "Suggestion on fares", "Complaint on Fare", "Fare_suggestion/Complaint",
+               "Survey", "Res_Station/train"]].copy(),fillna("")
 
 
 def preprocess(df):
